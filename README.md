@@ -1,6 +1,6 @@
 # capture-windows
 
-A Rust proof-of-concept hardware monitoring agent for Checkmate.
+A Rust proof-of-concept hardware monitoring agent for [Checkmate](https://github.com/bluewave-labs/checkmate).
 
 I created this version because I had already set up Checkmate for several websites and Linux infrastructures, but I needed Windows infrastructure support immediately. I didn’t want to bother installing multiple monitoring suites just to find one that suited my needs. So, I decided I only needed a simple CPU/memory/disk usage monitoring agent. How hard could it be, since we can see those numbers in Task Manager and Explorer? The best part is, I have a handful of AI agents to assist me. 😉
 
@@ -22,18 +22,14 @@ http://0.0.0.0:59232/api/v1/metrics
 
 | Metric                  | Status                                |
 |-------------------------|----------------------------------------|
-| CPU                    | ❌ Not implemented                     |
 | CPU usage              | ✅ Implemented                         |
 | CPU temperature        | ❌ Not supported yet                   |
-| CPU current frequency  | ✅ Using PDH (Performance Data Helper) |
-| Disk                  | ❌ Not implemented                     |
+| CPU current frequency  | ✅ Implemented                         |
+| Memory                 | ✅ Implemented                         |
 | System disk usage      | ✅ Implemented                         |
 | Other disk usage       | ❌ Not implemented                     |
 | Disk filtering         | ❌ Linux-only                          |
-| Docker                 | ❌ Not considered                      |
-| Host                   | ✅ Implemented                         |
+| Docker                 | ❌ Not implemented                     |
 | OS pretty name         | ✅ Implemented                         |
-| Memory                 | ✅ Cross-platform (via gopsutil)       |
 | Network                | ❌ Not considered                      |
-| SMART metrics          | ❌ Not considered                      |
 | SMART (via smartctl)   | ❌ Unix-only                           |
